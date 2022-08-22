@@ -1,0 +1,164 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s ease-in-out;
+    
+}
+
+body
+{
+    width: 100%;
+    height: auto;
+    background-color: var(--bgColor);
+    
+    
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+.dark-theme
+{
+    --bgColor: black;
+    --smallborder: gray;
+    --text-color:white;
+    --para-color:gray;
+}
+.light-theme
+{
+    --bgColor: white;
+    --smallborder: black;
+    --text-color:orange;
+    --para-color:black;
+}
+.App
+{
+    width: 100%;
+    height: auto;
+    background-color: var(--bgColor);
+    cursor:url(./cursor/curser.ico),auto;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 10px 2px;
+    padding: 10px;
+    border: 3px solid rgb(208, 97, 6);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(235, 108, 4),
+                inset 3px 3px 5px rgb(235, 108, 4);
+}
+
+h2
+{
+    font-family: monospace;
+    font-size: 25px;
+    margin-left: 5px;
+    color: var(--text-color);
+}
+
+.right
+{
+    display: flex;
+}
+
+.right h3{
+    align-items: center;
+    margin: auto;
+    margin-right: 10px;
+    color: var(--para-color);
+}
+
+#checkbox
+{
+    display: none;
+}
+
+.toggler
+{
+    display: block;
+    position: relative;
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+    border: 2px solid var(--smallborder);
+    box-shadow: 2px 2px 4px black,
+                inset 2px 2px 4px black;     
+    cursor: pointer;
+    background-color:var(--para-color);
+}
+
+.ball,
+.sun,
+.moon
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ball{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 50%;
+    left: 1px;
+    top: 14px;
+    z-index: 5;
+    box-shadow:3px 1px 5px black,
+    inset -3px -3px 4px rgba(255, 255, 255, 0.507);
+    transition: transform .5s ease-in-out;
+}
+.sun
+{
+    left: 5px;
+    top: 14px;
+    color: rgb(222, 222, 2);
+    
+}
+
+.moon
+{
+    right: 1px;
+    top: 14px;
+    color: rgb(203, 241, 245);
+}
+
+#checkbox:checked~.ball{
+    transform: translate(38px,-53%);
+}
+
+.card
+{
+    display:block;
+    width: 300px;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    border: 3px solid var(--smallborder);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(42, 42, 42),
+                inset 3px 3px 5px rgb(30, 30, 30);
+    padding: 30px;
+    margin: 40px 50px;
+}
+.card p{
+    text-align: justify;
+    color: var(--para-color);
+}
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
